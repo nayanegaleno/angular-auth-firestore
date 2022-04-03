@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "desafio-capyba:build:production",
+            "firebaseProject": "desafio-capyba-nay",
+            "firebaseHostingSite": "desafio-capyba-nay"
+          }
         }
       }
     }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-auth',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthComponent implements OnInit {
 
-  constructor() { }
-
+  email = new FormControl('',[Validators.required, Validators.email]);
+  senha = new FormControl('',Validators.required);
+  
+  constructor(private router: Router) { }
+  
   ngOnInit(): void {
+    
+  }
+
+  /**
+   * Evento de autenticação com E-mail e Senha
+   */
+  loginEmail (): void {
+    this.router.navigate(['/home']);
   }
 
 }

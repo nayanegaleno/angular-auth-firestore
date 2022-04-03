@@ -1,0 +1,25 @@
+@import '../../../styles.scss';
+
+.navbar{
+    display: flex;
+    .header {
+        display: flex;
+        align-items: center;
+
+        .icone {
+            width: 20px;
+            height: 20px;
+            padding-right: 10px;
+        }
+    }
+}
+
+.nav-list {
+    display: flex;
+    a {
+        display: flex;
+        min-width: 10rem;
+        justify-content: space-around;
+        margin-left: 10px;
+    }
+}

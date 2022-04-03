@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home.component';
+import { RestrictComponent } from './restrict.component';
 
 
 
 @NgModule({
   declarations: [
-    HomeComponent
+    RestrictComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    HomeComponent
+    RestrictComponent
   ]
 })
-export class HomeModule { }
+export class RestrictModule { }

@@ -1,0 +1,30 @@
+.auth-page{
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+.auth-image{
+    width: 100%;
+    max-width: 160vh;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.auth-form {
+    display: flex;
+    max-height: 260px;
+    min-width: 400px;
+    margin-top: 50px;
+
+    button {
+        min-width: 200px;
+        margin-top: 20px;
+    }
+}
+
+.form-content {
+    min-width: 400px;
+}
+

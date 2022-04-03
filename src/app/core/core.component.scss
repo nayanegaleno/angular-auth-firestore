@@ -1,0 +1,16 @@
+@import '../../styles.scss';
+
+
+.sidenav {
+    background-color: #ECEFF1;
+    width: 200px;
+    height: 88%;
+    i {
+        padding-right: 10px;
+    }
+}
+
+.content {
+    padding: 16px;
+    background-color: #FFF;
+}
