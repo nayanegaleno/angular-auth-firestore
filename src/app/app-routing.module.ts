@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthComponent } from './core/auth/auth.component';
-import { CoreComponent } from './core/core.component';
-import { HomeComponent } from './home/home.component';
-import { RestrictComponent } from './restrict/restrict.component';
+import { HomeComponent } from './core/home/homecomponent';
+import { MemberComponent } from './member/member.component';
+import { RoleComponent } from './restrict/role/role.component';
 
 const routes: Routes = [
   {
@@ -16,15 +16,15 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: CoreComponent,
+    component: HomeComponent,
     children: [
       {
         path: '',
-        component: HomeComponent
+        component: MemberComponent
       },
       {
         path: 'restrict',
-        component: RestrictComponent
+        component: RoleComponent
       }
     ]
   }

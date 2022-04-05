@@ -1,18 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RestrictComponent } from './restrict.component';
+
+
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { RoleComponent } from './role/role.component';
 
 
 
 @NgModule({
   declarations: [
-    RestrictComponent
+    RoleComponent
   ],
   imports: [
     CommonModule
-  ],
+  ], 
   exports: [
-    RestrictComponent
+    RoleComponent
+  ], 
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 export class RestrictModule { }

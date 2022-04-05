@@ -6,25 +6,25 @@ import { Router } from '@angular/router'
 describe('AuthComponent', () => {
   let component: AuthComponent;
   let fixture: ComponentFixture<AuthComponent>;
+  let router: Router;
 
-  compileAndCreate();
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ AuthComponent ]
+    })
+    .compileComponents();
+  });
 
-  function compileAndCreate() {
-    beforeEach(waitForAsync(() => {
-      const routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
-      TestBed
-          .configureTestingModule({
-            providers: [
-              {provide: Router, useValue: routerSpy}
-            ]
-          })
-          .compileComponents()
-          .then(() => {
-            fixture = TestBed.createComponent(AuthComponent);
-            component = fixture.componentInstance;
-          });
-    }));
-  }
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [AuthComponent, {provide: Router, useValue: router}]
+    });
+
+    fixture = TestBed.createComponent(AuthComponent);
+    component = TestBed.inject(AuthComponent);
+    router = TestBed.inject(Router);
+    fixture.detectChanges();
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

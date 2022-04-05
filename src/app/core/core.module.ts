@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AuthComponent } from './auth/auth.component';
-import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { CoreComponent } from './core.component';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/homecomponent';
 
 import { AppRoutingModule } from '../app-routing.module';
 
@@ -18,12 +18,17 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
+import { MemberModule } from '../member/member.module'
+import { RestrictModule } from '../restrict/restrict.module';
+
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 @NgModule({
   declarations: [
     AuthComponent,
-    HeaderComponent,
     FooterComponent,
-    CoreComponent
+    HeaderComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,
@@ -37,13 +42,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
+    MemberModule,
+    RestrictModule,
     AppRoutingModule
   ],
   exports: [
     AuthComponent,
-    HeaderComponent,
     FooterComponent,
-    CoreComponent
+    HeaderComponent,
+    HomeComponent
+  ],schemas: [ 
+    CUSTOM_ELEMENTS_SCHEMA 
   ]
 })
 export class CoreModule { }
