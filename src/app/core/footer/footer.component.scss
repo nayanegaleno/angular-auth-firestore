@@ -1,0 +1,11 @@
+@import '../../../styles.scss';
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+    font-size: 14px;
+
+    display: flex;
+    justify-content: space-between;
+}

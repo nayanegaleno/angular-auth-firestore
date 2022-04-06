@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "desafio-capyba-nay"
+  },
+  "targets": {
+    "desafio-capyba-nay": {
+      "hosting": {
+        "desafio-capyba": [
+          "desafio-capyba-nay"
+        ]
+      }
+    }
+  }
+}
