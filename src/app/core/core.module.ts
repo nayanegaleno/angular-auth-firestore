@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthComponent } from './auth/auth.component';
+import { AuthComponent } from '../auth/auth.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/homecomponent';
-
-import { AppRoutingModule } from '../app-routing.module';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,18 +15,21 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import { MemberModule } from '../member/member.module'
 import { RestrictModule } from '../restrict/restrict.module';
 
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CoreRoutingModule } from './core-routing.module';
+import { MemberComponent } from './member/member.component';
 
 @NgModule({
   declarations: [
     AuthComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    MemberComponent
   ],
   imports: [
     CommonModule,
@@ -42,15 +43,19 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     MatToolbarModule,
     MatButtonModule,
     MatFormFieldModule,
-    MemberModule,
+    ReactiveFormsModule,
     RestrictModule,
-    AppRoutingModule
+    CoreRoutingModule
   ],
   exports: [
     AuthComponent,
     FooterComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    MemberComponent
+  ],
+  providers: [
+    //MemberService
   ],schemas: [ 
     CUSTOM_ELEMENTS_SCHEMA 
   ]

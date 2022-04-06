@@ -1,32 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthComponent } from './core/auth/auth.component';
-import { HomeComponent } from './core/home/homecomponent';
-import { MemberComponent } from './member/member.component';
-import { RoleComponent } from './restrict/role/role.component';
+
+import { AuthGuard, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
 
 const routes: Routes = [
+  
   {
     path: '',
-    redirectTo: '/auth', pathMatch: 'full'
+    loadChildren: () =>
+    import('./core/core.module').then((m) => m.CoreModule)
   },
   {
-    path: 'auth',
-    component: AuthComponent
-  },
-  {
-    path: 'home',
-    component: HomeComponent,
-    children: [
-      {
-        path: '',
-        component: MemberComponent
-      },
-      {
-        path: 'restrict',
-        component: RoleComponent
-      }
-    ]
+    path: '**',
+    redirectTo: '', 
+    pathMatch: 'full'
   }
 ];
 
