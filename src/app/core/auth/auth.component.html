@@ -1,0 +1,42 @@
+<div class="auth-page">
+    <img class="auth-image" src="../../../assets/img/capibaribe1.jpg" alt="Imagem do Rio Capibaribe em Recife-PE">
+    
+    <mat-card class="auth-card">
+        <mat-card-content class="form-content">
+            <form class="login-form" [formGroup]="form">
+                <mat-form-field appearance="fill" class="form-control">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" type="text" required />
+                    <mat-error *ngIf="email?.hasError('required')">
+                        A valid Email is required!
+                    </mat-error>
+                 </mat-form-field>
+
+                <mat-form-field appearance="fill" class="form-control">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" type="password" required />
+                    <mat-error *ngIf="password?.hasError('required')">
+                      Password is required!
+                    </mat-error>
+                </mat-form-field>
+
+                <div class="form-footer">
+                    <button [disabled]="form.invalid" class="login-button" mat-raised-button (click)="login()">
+                        Login
+                    </button>
+                
+                    <mat-hint>
+                        Want to create an awesome account?
+                    </mat-hint>
+                    <button [disabled]="form.invalid" class="signup-button" mat-raised-button (click)="createAccount()">
+                        Sign up
+                    </button>
+
+                    <button class="google-button" mat-raised-button (click)="loginGoogle()">
+                        Login com Google
+                    </button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

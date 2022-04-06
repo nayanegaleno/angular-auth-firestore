@@ -1,0 +1,26 @@
+<mat-card class="profile">
+    <mat-card-title>
+        <mat-icon>people</mat-icon> 
+        <div class="title">Profile</div>
+    </mat-card-title>
+
+    <form class="profile-form">
+        <mat-form-field appearance="fill">
+            <mat-label>Name:</mat-label>
+            <input matInput type="string" value="{{displayName}}" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>User Email:</mat-label>
+            <input matInput type="email" value="{{email}}" disabled="true" />
+        </mat-form-field>
+         
+         <div class="checkbox">
+             <mat-checkbox class="disabled" disabled="true" [checked]=(!!emailVerificado)>Email Verificado</mat-checkbox>
+             <button class="update-button" mat-raised-button (click)="updateUser()">
+                Login
+            </button>
+         </div>
+
+    </form>
+</mat-card>

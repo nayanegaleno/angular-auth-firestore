@@ -1,0 +1,23 @@
+.team {
+    display: flex;
+    
+    .member {
+        display: flex;
+
+        flex-wrap: wrap;
+        justify-content: center;
+
+        width: 200px;
+        height: 200px;
+        margin: 15px;
+
+        background-color: #E0F2F1;
+
+        img {
+            width: 100%;
+            max-width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    }
+}

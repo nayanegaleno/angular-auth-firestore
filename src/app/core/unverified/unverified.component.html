@@ -1,0 +1,33 @@
+<mat-card class="unverifiedCard" *ngIf="(!emailVerified)">
+    <mat-card-header>
+        <mat-card-title>Sorry! this is a Restrict page, click in the link sent to your 
+            email{{currentEmail}} to access.</mat-card-title>
+    </mat-card-header>
+
+    <mat-hint>
+        Want to re-sent your Email verification link?
+    </mat-hint>
+    <button mat-raised-button (click)="newEmailVerification()">
+        Sign up
+    </button>
+
+    <mat-card class="example-card">
+        <mat-card-subtitle>Sorry!</mat-card-subtitle>
+        <mat-card-title>This page is restrict</mat-card-title>
+        <mat-card-content>
+          <p>Only users that verified their email can acess this data</p>
+          <p>You can verify your email by clicking in the link sent to you when you signed up</p>
+          <p>Do you want a new email verification link?</p>
+        </mat-card-content>
+        <mat-divider inset></mat-divider>
+        <mat-card-actions>
+          <button mat-raised-button>Sent new link</button>
+          <button mat-raised-button>Back to home</button>
+        </mat-card-actions>
+        <mat-card-footer>
+          <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </mat-card-footer>
+      </mat-card>
+
+</mat-card>
+<router-outlet></router-outlet>

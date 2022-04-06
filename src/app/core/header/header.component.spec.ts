@@ -1,13 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/auth/auth.service';
+import { AuthService } from 'src/app/core/auth/auth.service';
 
 import { HeaderComponent } from './header.component';
 
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { environment } from 'src/environments/environment';
-import { Auth, provideAuth } from '@angular/fire/auth';
+import { provideAuth } from '@angular/fire/auth';
 import { provideFirebaseApp } from '@angular/fire/app';
 
 

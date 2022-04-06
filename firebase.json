@@ -5,6 +5,7 @@
   },
   "hosting": [
     {
+      "target": "desafio-capyba",
       "public": "src",
       "ignore": [
         "firebase.json",

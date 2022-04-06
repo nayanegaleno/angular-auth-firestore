@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/auth/auth.service';
+import { AuthService } from '../auth/services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +8,8 @@ import { AuthService } from 'src/app/auth/auth.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  emailVerified = this.authService.isEmailVerified();
 
   constructor(private readonly authService: AuthService,
     private readonly router: Router) { }
@@ -20,5 +22,5 @@ export class HeaderComponent implements OnInit {
     .then(() => this.router.navigate(['']))
     .catch((e) => console.log(e.message));
   }
-
+  
 }

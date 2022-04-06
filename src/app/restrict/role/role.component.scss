@@ -1,0 +1,21 @@
+.roles {
+    display: flex;
+    
+    .role {
+        display: flex;
+
+        flex-wrap: wrap;
+        justify-content: center;
+
+        width: 400px;
+        height: 200px;
+        margin: 15px;
+
+        img {
+            width: 100%;
+            max-width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    }
+}
