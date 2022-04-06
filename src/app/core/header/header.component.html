@@ -4,14 +4,19 @@
         <h1>Desafio Capyba</h1>
     </span>
 
-    <nav mat-tab-nav-bar >
+    <nav class="tabBar" mat-tab-nav-bar >
         <a mat-tab-link routerLink="/home" routerLinkActive="active"> Home </a>
-        <a mat-tab-link routerLink="/home/restrict" routerLinkActive="active"> Restrict </a>
+
+        <a mat-tab-link *ngIf="(emailVerified)" routerLink="/home/restrict/verified" routerLinkActive="active"> Restrict </a>
+   
+        <a mat-tab-link *ngIf="(!emailVerified)" routerLink="/home/restrict" routerLinkActive="active"> Restrict </a>
     </nav>
 
-    <button mat-raised-button (click)="logOut()">
-        Logout
-    </button>
+    <div class="logoutButton" >
+        <button mat-raised-button (click)="logOut()">
+            Logout
+        </button>
+    </div>
     
 </mat-toolbar>
 

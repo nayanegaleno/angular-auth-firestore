@@ -1,0 +1,20 @@
+<div class="roles">
+    <mat-card class="role" *ngFor="let role of roles | async">
+        <mat-card-header>
+            <mat-card-title>{{ role.name }}</mat-card-title>
+        </mat-card-header>
+        
+        <img mat-card-md-image src="../../assets/img/members/{{ role.picture }}"/>
+
+        <mat-card-content>
+            <mat-card-title>{{ role.role }}</mat-card-title>
+        </mat-card-content>
+        <mat-card-content>
+            <mat-card-subtitle>{{ role.address }}</mat-card-subtitle>
+        </mat-card-content>
+        <mat-card-content>
+            <mat-card-subtitle>{{ role.fone }}</mat-card-subtitle>
+        </mat-card-content>
+    
+    </mat-card>
+</div>
