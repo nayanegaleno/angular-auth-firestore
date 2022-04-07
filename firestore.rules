@@ -4,8 +4,7 @@ service cloud.firestore {
     match /team/{member} {
       allow read: if true;
       match /restricts/{restrict} {
-      	//allow read: if request.auth.token.email_verified;
-        allow read: if true;
+      	allow read: if request.auth.token.email_verified;
       }
     }
   }
