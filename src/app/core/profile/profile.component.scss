@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     width: 300px;
     height: 400px;
+    background-color: #E0F2F1;
 
         mat-icon {
             font-size: 50px;
@@ -24,7 +25,12 @@
             width: 280px;
         }
 
-        .checkbox {
-            margin-left: 15px;
+        .check {
+            margin-left: 74px;
+        }
+
+        .button {
+            margin-left: 104px;
+            margin-top: 30px;
         }
 }

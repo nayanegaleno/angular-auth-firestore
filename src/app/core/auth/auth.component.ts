@@ -38,6 +38,7 @@ export class AuthComponent implements OnInit {
 
   openSnackBar(error: string) {
     this._snackBar.open(error, 'x', {
+      duration: 4000,
       horizontalPosition: 'right',
       verticalPosition: 'top'
     });
@@ -46,7 +47,7 @@ export class AuthComponent implements OnInit {
   login() {
     this.authService.loginEmail(this.form.value.email, this.form.value.password)
     .then(() => this.router.navigate(['home']))
-    .catch((e) => this.openSnackBar('User not found!'));
+    .catch((e) => this.openSnackBar('User or password incorrect!'));
     
   }
 

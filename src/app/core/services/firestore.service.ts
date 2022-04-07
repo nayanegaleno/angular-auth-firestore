@@ -43,8 +43,9 @@ export class FirestoreService {
         picture: doc.get('picture'),
         role: doc.get('restricts').role,
         address: doc.get('restricts').address,
-        fone: doc.get('restricts').fone
+        fone: doc.get('restricts').fone,
       })
+      console.log(doc.get('name'))
     })
     return members;
   }
